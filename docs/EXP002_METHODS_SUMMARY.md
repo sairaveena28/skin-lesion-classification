@@ -1,0 +1,9 @@
+# Methods Summary: EfficientNet-B0 Classical Baseline (EXP-002)
+
+The secondary classical baseline was established using the HAM10000 dataset, comprising 10,015 dermatoscopic images across 7 diagnostic classes. To ensure rigorous evaluation and prevent data leakage from repeated samples of the same physical lesion, a strict lesion-level splitting protocol was maintained identically to EXP-001. Specifically, the dataset was partitioned into a training set (7,974 images from 5,976 unique lesions) and a validation set (2,041 images from 1,494 unique lesions), with zero lesion overlap. A constant random seed of 42 was employed to ensure reproducibility.
+
+To counteract the severe class imbalance inherent in the HAM10000 dataset, training utilized an inverse-frequency balanced weighting scheme applied to a CrossEntropyLoss function. These class weights were calculated strictly from the training partition to avoid any validation data leakage.
+
+The chosen baseline architecture was a `torchvision` EfficientNet-B0 model initialized with ImageNet (`IMAGENET1K_V1`) pre-trained weights. The model underwent full fine-tuning, with its final classifier layer replaced by a linear mapping to the 7 target classes. Training was performed using the Adam optimizer with a learning rate of 0.0001 and a batch size of 32 for a total of 10 epochs. Image preprocessing for the training set included random resized cropping (to 224×224), horizontal flipping, arbitrary rotation (up to 20 degrees), and color jitter, followed by standard ImageNet normalization. Validation images were deterministically resized and normalized. 
+
+Model selection was based on the lowest validation loss achieved across all training epochs. The model yielding this minimum validation loss was saved as the optimal baseline checkpoint and subsequently evaluated to report final macroscopic and per-class performance metrics, alongside confusion matrices and Grad-CAM interpretability visualizations.

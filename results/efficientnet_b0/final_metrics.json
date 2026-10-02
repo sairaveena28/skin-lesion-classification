@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-002",
+  "final_metrics": {
+    "accuracy": 0.8079,
+    "macro_precision": 0.7071,
+    "macro_recall": 0.7362,
+    "macro_f1": 0.716,
+    "weighted_precision": 0.8311,
+    "weighted_recall": 0.8079,
+    "weighted_f1": 0.8157
+  },
+  "per_class": {
+    "akiec": {
+      "precision": 0.5277777777777778,
+      "recall": 0.5588235294117647,
+      "f1-score": 0.5428571428571428,
+      "support": 68.0
+    },
+    "bcc": {
+      "precision": 0.7938931297709924,
+      "recall": 0.7878787878787878,
+      "f1-score": 0.7908745247148289,
+      "support": 132.0
+    },
+    "bkl": {
+      "precision": 0.6890756302521008,
+      "recall": 0.6721311475409836,
+      "f1-score": 0.6804979253112033,
+      "support": 244.0
+    },
+    "df": {
+      "precision": 0.75,
+      "recall": 0.6176470588235294,
+      "f1-score": 0.6774193548387096,
+      "support": 34.0
+    },
+    "mel": {
+      "precision": 0.5,
+      "recall": 0.7377777777777778,
+      "f1-score": 0.5960502692998204,
+      "support": 225.0
+    },
+    "nv": {
+      "precision": 0.9389632107023411,
+      "recall": 0.8625192012288786,
+      "f1-score": 0.899119295436349,
+      "support": 1302.0
+    },
+    "vasc": {
+      "precision": 0.75,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.825,
+      "support": 36.0
+    }
+  },
+  "best_epoch": 9,
+  "total_training_time_sec": 2633.5,
+  "checkpoint_path": "results\\efficientnet_b0\\best_model.pth"
+}
