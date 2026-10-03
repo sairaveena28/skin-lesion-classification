@@ -1,0 +1,63 @@
+{
+  "experiment_id": "EXP-003",
+  "final_metrics": {
+    "accuracy": 0.8055,
+    "macro_precision": 0.7084,
+    "macro_recall": 0.7455,
+    "macro_f1": 0.7231,
+    "weighted_precision": 0.823,
+    "weighted_recall": 0.8055,
+    "weighted_f1": 0.8114
+  },
+  "per_class": {
+    "akiec": {
+      "precision": 0.6363636363636364,
+      "recall": 0.5147058823529411,
+      "f1-score": 0.5691056910569106,
+      "support": 68.0
+    },
+    "bcc": {
+      "precision": 0.7350993377483444,
+      "recall": 0.8409090909090909,
+      "f1-score": 0.784452296819788,
+      "support": 132.0
+    },
+    "bkl": {
+      "precision": 0.621160409556314,
+      "recall": 0.7459016393442623,
+      "f1-score": 0.6778398510242085,
+      "support": 244.0
+    },
+    "df": {
+      "precision": 0.6764705882352942,
+      "recall": 0.6764705882352942,
+      "f1-score": 0.6764705882352942,
+      "support": 34.0
+    },
+    "mel": {
+      "precision": 0.5255474452554745,
+      "recall": 0.64,
+      "f1-score": 0.5771543086172345,
+      "support": 225.0
+    },
+    "nv": {
+      "precision": 0.9346186085498742,
+      "recall": 0.8563748079877113,
+      "f1-score": 0.8937875751503006,
+      "support": 1302.0
+    },
+    "vasc": {
+      "precision": 0.8292682926829268,
+      "recall": 0.9444444444444444,
+      "f1-score": 0.8831168831168831,
+      "support": 36.0
+    }
+  },
+  "best_epoch": 8,
+  "total_training_time_sec": 2726.7,
+  "total_parameters": 5525767,
+  "trainable_parameters": 5525767,
+  "feature_dimension": 192,
+  "checkpoint_path": "results\\vit_tiny\\best_model.pth",
+  "pretraining_note": "ImageNet-21K -> ImageNet-1K (AugReg), differs from EXP-001/EXP-002 which use ImageNet-1K only"
+}
