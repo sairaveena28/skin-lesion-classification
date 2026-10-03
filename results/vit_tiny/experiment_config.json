@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "model_name": "vit_tiny",
+  "timm_model": "vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+  "num_classes": 7,
+  "image_size": 224,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "learning_rate": 0.0001,
+  "optimizer": "adam",
+  "use_class_weights": true,
+  "use_augmentation": true,
+  "train_test_split": 0.8,
+  "metadata_csv": "D:/miniproject/mini_project-lfs/HAM10000_metadata.csv",
+  "data_dir": "D:/miniproject/mini_project-lfs",
+  "feature_dimension": 192,
+  "total_parameters": 5525767,
+  "trainable_parameters": 5525767,
+  "visualization": "CLS-token attention (not Grad-CAM)",
+  "pretraining": "ImageNet-21K -> ImageNet-1K (AugReg)"
+}
